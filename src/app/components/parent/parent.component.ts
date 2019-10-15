@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output } from '@angular/core';
 import { EventEmitter } from 'events';
 import { Observable } from 'rxjs';
 import { AppService } from '../../shared/services/app.service';
+import { User } from 'src/app/shared/models/data.model';
 
 @Component({
   selector: 'app-parent',
@@ -11,12 +12,12 @@ import { AppService } from '../../shared/services/app.service';
 export class ParentComponent implements OnInit {
 
   constructor(private appService: AppService) { }
-  data: Observable<any>;
+  data$: Observable<User[]>;
   /**
    * Initializing life cycle of a component
    */
   ngOnInit() {
-    this.data = this.appService.getData();
+    this.data$ = this.appService.getData();
   }
 
 }

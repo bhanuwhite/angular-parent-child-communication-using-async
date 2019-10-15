@@ -6,6 +6,9 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Username</th>
+                <th>City</th>
+                <th>Zipcode</th>
             </tr>
         </thead>
         <tbody>
@@ -13,6 +16,9 @@
                 <td>{{user.id}}</td>
                 <td>{{user.name}}</td>
                 <td>{{user.email}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.address.city}}</td>
+                <td>{{user.address.zipcode}}</td>
             </tr>
         </tbody>
     </table>
